@@ -1,0 +1,43 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+env\Scripts\activate
+
+An API is a code which allows two program to communicate.
+
+A developer can write a program which can communicate with an API. 
+A restful api is a API that uses HTTP requests to GET, PUT, POST and DELETE data.
+REST stands for Representational State Transfer.
+REST is an architectural style for developing  web application.
+
+FAST API -
+A python framework to build APIs.
+It is fast as it support async programming.
+It was launched in 2018, hence relatively new.
+You need to use  python 3.6 above to use Fast API.
+it is speed oriented framework performance is priority.
+It is also more flexible as compared to DRF, as in DRF things need to be done in certain way
+FAST API on the other hand is flexible, it does not restrict user to a particular code layout.
+Validates developers data type even in a deeply nested JSON requests.
+
+While creating a schema for your API, you can also define the data type of every field.
+can build GraphQL API.
+Build on standards like JSON, OAuth and Open API.
+Much faster to build/develop an API as compared to other frameworks.
+Intuitive as it has a great editor support.
+
+python -m venv env
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+env\Scripts\activate
+pip install fastapi
+
+run you fast api you should have uvicorn server
+pip install uvicorn
+uvicorn main:app --reload
+
+remove existing pycache-file
+# From your project root
+Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Force
+Get-ChildItem -Recurse -File -Include *.pyc,*.pyo | Remove-Item -Force
+
+per session also run this command - $env:PYTHONDONTWRITEBYTECODE="1"
