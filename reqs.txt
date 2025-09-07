@@ -34,6 +34,7 @@ pip install fastapi
 run you fast api you should have uvicorn server
 pip install uvicorn
 uvicorn main:app --reload
+pip install pydantic
 
 remove existing pycache-file
 # From your project root
@@ -41,3 +42,7 @@ Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Fo
 Get-ChildItem -Recurse -File -Include *.pyc,*.pyo | Remove-Item -Force
 
 per session also run this command - $env:PYTHONDONTWRITEBYTECODE="1"
+
+pip3 install -r requirements.txt product.main:app --reload
+
+uvicorn Product.main:app --reload
